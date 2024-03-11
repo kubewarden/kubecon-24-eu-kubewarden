@@ -29,6 +29,10 @@ proxy.grafana: ## proxy will create local port-forward to grafana
 proxy.prometheus: ## proxy will create local port-forward to prometheus
 	kubectl port-forward -n prometheus --address 0.0.0.0 svc/prometheus-operated 9090
 
+check.metrics:
+	kubectl delete pod curlpod --ignore-not-found && kubectl run curlpod -t -i --rm --wait --namespace kubewarden --image curlimages/curl:8.00.1 --restart=Never -- --silent policy-server-default.kubewarden.svc.cluster.local:8080/metrics
+
+
 .PHONY: help
 help: ## Show this Makefile's help
     @grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
