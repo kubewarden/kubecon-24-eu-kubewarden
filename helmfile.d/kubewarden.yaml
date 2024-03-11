@@ -13,7 +13,6 @@ releases:
     chart: kubewarden/kubewarden-crds
     wait: true
     waitForJobs: true
-    disableValidationOnInstall: true
     version: 1.4.5
   - name: kubewarden-controller
     namespace: kubewarden
@@ -25,8 +24,9 @@ releases:
       - kubewarden/kubewarden-crds
     values:
       - telemetry:
-          enabled: true
-          port: 8080
+          metrics:
+            enabled: true
+            port: 8080
         auditScanner:
           policyReporter: true
     version: 2.0.8
@@ -38,6 +38,7 @@ releases:
     disableValidationOnInstall: true
     needs:
       - kubewarden/kubewarden-crds
+      - kubewarden/kubewarden-controller
     values:
       - recommendedPolicies:
           enabled: true
