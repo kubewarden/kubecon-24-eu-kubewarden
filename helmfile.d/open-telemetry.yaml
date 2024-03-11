@@ -1,0 +1,17 @@
+repositories:
+  - name: open-telemetry
+    url: https://open-telemetry.github.io/opentelemetry-helm-charts
+
+helmDefaults:
+  createNamespace: true
+  timeout: 180 
+  atomic: true
+  verify: false
+  wait: true
+releases:
+  - name: open-telemetry
+    namespace: open-telemetry
+    version: 0.48.0
+    chart: open-telemetry/opentelemetry-operator
+    wait: true
+

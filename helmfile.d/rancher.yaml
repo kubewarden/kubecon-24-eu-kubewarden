@@ -1,0 +1,33 @@
+---
+# k3d cluster create lab --volume /dev/mapper/:/dev/mapper/
+# k3d cluster delete lab
+# helmfile --file rancher.yaml sync
+
+repositories:
+  - name: rancher
+    url: https://releases.rancher.com/server-charts/latest
+helmDefaults:
+  createNamespace: true
+  timeout: 180 
+  atomic: true
+  verify: false
+  wait: true
+
+releases:
+  - name: rancher
+    namespace: cattle-system
+    chart: rancher/rancher
+    disableValidationOnInstall: true
+    wait: true
+    waitForJobs: true
+    version: 2.8.2
+    values:
+      - hostname: rancher.local
+      - bootstrapPassword: admin
+      - ingress:
+          tls:
+            source: 'letsEncrypt'
+        letsEncrypt:
+          ingress:
+            class: 'traefik'
+

@@ -1,0 +1,45 @@
+repositories:
+  - name: kubewarden
+    url: https://charts.kubewarden.io
+helmDefaults:
+  createNamespace: true
+  timeout: 180
+  atomic: true
+  verify: false
+  wait: true
+releases:
+  - name: kubewarden-crds
+    namespace: kubewarden
+    chart: kubewarden/kubewarden-crds
+    wait: true
+    waitForJobs: true
+    disableValidationOnInstall: true
+    version: 1.4.5
+  - name: kubewarden-controller
+    namespace: kubewarden
+    chart: kubewarden/kubewarden-controller
+    wait: true
+    waitForJobs: true
+    disableValidationOnInstall: true
+    needs:
+      - kubewarden/kubewarden-crds
+    values:
+      - telemetry:
+          enabled: true
+          port: 8080
+        auditScanner:
+          policyReporter: true
+    version: 2.0.8
+  - name: kubewarden-defaults
+    namespace: kubewarden
+    chart: kubewarden/kubewarden-defaults
+    wait: true
+    waitForJobs: true
+    disableValidationOnInstall: true
+    needs:
+      - kubewarden/kubewarden-crds
+    values:
+      - recommendedPolicies:
+          enabled: true
+          defaultPolicyMode: protect
+    version: 1.9.3

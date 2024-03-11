@@ -1,0 +1,6 @@
+helmfiles:
+  - ../helmfile.d/cert-manager.yaml
+  - ../helmfile.d/open-telemetry.yaml
+  - ../helmfile.d/prometheus.yaml
+  - ../helmfile.d/kubewarden.yaml
+

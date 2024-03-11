@@ -1,0 +1,3 @@
+helmfiles:
+  - ../helmfile.d/cert-manager.yaml
+  - ../helmfile.d/rancher.yaml
