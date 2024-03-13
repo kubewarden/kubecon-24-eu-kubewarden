@@ -1,6 +1,8 @@
+K3S_VERSION="v1.27.11-k3s1"
+
 .PHONY: lab_create
 lab_create: ## Create a Kubewarden lab environment
-	@k3d cluster create kubewarden-lab
+	@k3d cluster create --image rancher/k3s:$(K3S_VERSION) kubewarden-lab
 
 .PHONY: lab_delete
 lab_delete: ## Delete the Kubewarden lab environment
