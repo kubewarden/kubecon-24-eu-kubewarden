@@ -8,18 +8,13 @@ repositories:
     url: https://releases.rancher.com/server-charts/latest
 helmDefaults:
   createNamespace: true
-  timeout: 180 
-  atomic: true
   verify: false
-  wait: true
+  waitForJobs: true
 
 releases:
   - name: rancher
     namespace: cattle-system
     chart: rancher/rancher
-    disableValidationOnInstall: true
-    wait: true
-    waitForJobs: true
     version: 2.8.2
     values:
       - hostname: rancher.local
