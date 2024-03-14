@@ -5,7 +5,7 @@
 
 ![cncf](static/cncf-icon-color.png)
 
-Incubating
+Sandbox
 
 
 ## Slack

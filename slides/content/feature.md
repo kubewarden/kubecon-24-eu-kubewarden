@@ -1,4 +1,4 @@
-# Feature
+# Features
 
 
 ## WASM
@@ -12,17 +12,17 @@ Go, Rust, Typescript, Rego, YAML, CEL, C#, Swift, etc.
 
 ## Audit Scanner
 
-Consistently verify the compliance state of Kubernetes cluster.
+Continuously verify the compliance state of the Kubernetes cluster.
 
 
-## Context Aware Policy 
+## Context Aware Policies
 
 Determine whether an AdmissionRequest is acceptable using information from resources deployed in the cluster
 
 
-## Metrics
+## Metrics & Tracing
 
-Kubewarden &#10084; Prometheus
+Kubewarden &#10084; Prometheus, Jaeger, OpenTelemetry
 
 
 ## Security
@@ -32,10 +32,10 @@ Kubewarden &#10084; Sigstore
 
 ## Distribute
 
-Share policy using any OCI based registry
+Share policies using an OCI based registry
 
 
 ## Raw Policies 
 
-Evaluate arbitrary JSON documents
+Evaluate arbitrary JSON documents out-of-cluster
 
