@@ -1,4 +1,5 @@
 helmfiles:
   - ../helmfile.d/cert-manager.yaml
+  - ../helmfile.d/open-telemetry.yaml
   - ../helmfile.d/jaeger.yaml
   - ../helmfile.d/rancher.yaml
