@@ -1,0 +1,21 @@
+repositories:
+  - name: jaegertracing
+    url: https://jaegertracing.github.io/helm-charts
+
+helmDefaults:
+  createNamespace: true
+  timeout: 180 
+  atomic: true
+  verify: false
+  wait: true
+releases:
+  - name: jaeger-operator
+    namespace: jaeger
+    version: 2.49.0
+    chart: jaegertracing/jaeger-operator
+    wait: true
+    values:
+      - rbac:
+          clusterRole: true
+
+# Service to use kubewarden-collector
