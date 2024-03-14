@@ -1,13 +1,17 @@
 # Features
 
 
-## WASM
+## WebAssembly
 
 Write policies using any programming language that supports WebAssembly as a compilation target.
+
+![image](static/wasm-logo.png)
 
 ---
 
 Go, Rust, Typescript, Rego, YAML, CEL, C#, Swift, etc.
+
+---
 
 
 ## Audit Scanner
