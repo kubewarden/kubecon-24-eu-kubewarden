@@ -11,6 +11,7 @@ This repository contains everything needed to deploy and test Kubewarden in a sa
 * [Helmfile](https://github.com/helmfile/helmfile/releases/latest)
 
 * [Helm](https://github.com/helm/helm/releases/latest)
+* [Helm diff plugin](https://github.com/databus23/helm-diff)
 * [Sops](https://github.com/getsops/sops/releases/latest)
 
 ## Help
