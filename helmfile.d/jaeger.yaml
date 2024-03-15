@@ -8,14 +8,18 @@ helmDefaults:
   atomic: true
   verify: false
   wait: true
+
 releases:
   - name: jaeger-operator
     namespace: jaeger
     version: 2.49.0
     chart: jaegertracing/jaeger-operator
-    wait: true
     values:
       - rbac:
           clusterRole: true
-
-# Service to use kubewarden-collector
+  - name: jaeger-kubewarden
+    chart: ../charts/jaeger
+    namespace: jaeger
+    disableValidationOnInstall: true
+    needs:
+      - jaeger-operator
