@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello
+  namespace: default
+spec:
+  containers:
+  - name: hello
+    image: busybox
+    command: [ "sh", "-c", "echo 'Hello!' && sleep 1h" ]
+    securityContext:
+      capabilities:
+        add:
+        - NET_ADMIN
