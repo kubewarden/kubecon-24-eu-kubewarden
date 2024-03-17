@@ -1,0 +1,11 @@
+helmDefaults:
+  createNamespace: true
+  timeout: 180
+  atomic: true
+  verify: false
+  wait: true
+
+releases:
+  - name: fakeworkload
+    chart: ../charts/fakeWorkLoad
+    namespace: default

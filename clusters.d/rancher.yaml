@@ -3,3 +3,4 @@ helmfiles:
   - ../helmfile.d/open-telemetry.yaml
   - ../helmfile.d/jaeger.yaml
   - ../helmfile.d/rancher.yaml
+  - ../helmfile.d/fakeWorkLoad.yaml

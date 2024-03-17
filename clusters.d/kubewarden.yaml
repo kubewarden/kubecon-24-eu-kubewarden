@@ -4,4 +4,5 @@ helmfiles:
   - ../helmfile.d/prometheus.yaml
   - ../helmfile.d/jaeger.yaml
   - ../helmfile.d/kubewarden.yaml
+  - ../helmfile.d/fakeWorkLoad.yaml
 
