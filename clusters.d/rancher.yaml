@@ -4,3 +4,4 @@ helmfiles:
   - ../helmfile.d/jaeger.yaml
   - ../helmfile.d/rancher.yaml
   - ../helmfile.d/fakeWorkLoad.yaml
+  - ../helmfile.d/additionalPolicies.yaml
