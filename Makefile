@@ -7,6 +7,14 @@ lab_create: ## Create a Kubewarden lab environment
 .PHONY: lab_delete
 lab_delete: ## Delete the Kubewarden lab environment
 	@k3d cluster delete kubewarden-lab
+	
+.PHONY: lab_start
+lab_start: ## Start the Kubewarden lab environment, if already created
+	@k3d cluster start kubewarden-lab
+	
+.PHONY: lab_stop
+lab_stop: ## Stop the Kubewarden lab environment. Restart with lab_start
+	@k3d cluster stop kubewarden-lab
 
 .PHONY: reset_kubewarden
 lab_reset: lab_delete lab_create ## Delete and recreate a Kubewarden lab environment

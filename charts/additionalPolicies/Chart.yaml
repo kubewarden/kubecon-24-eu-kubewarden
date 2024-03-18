@@ -1,0 +1,4 @@
+apiVersion: v2
+name: additionalPolicies
+description: Additional Kubewarden policies to flag fakeWorkLoad resources
+version: 0.1.0

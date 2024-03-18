@@ -5,4 +5,4 @@ helmfiles:
   - ../helmfile.d/jaeger.yaml
   - ../helmfile.d/kubewarden.yaml
   - ../helmfile.d/fakeWorkLoad.yaml
-
+  - ../helmfile.d/additionalPolicies.yaml

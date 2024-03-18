@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo-capabilities
+  namespace: default
+spec:
+  containers:
+    - name: test-admin-cap
+      image: busybox
+      command: ["sh", "-c", "echo 'Hello!' && sleep 1h"]
+      securityContext:
+        capabilities:
+          add:
+            - NET_ADMIN
