@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: demo-costcenter
+  namespace: default
+  labels:
+    cost-center: "123"
