@@ -3,7 +3,7 @@ repositories:
     url: https://charts.kubewarden.io
 helmDefaults:
   createNamespace: true
-  timeout: 180
+  timeout: 360
   atomic: true
   verify: false
   wait: true
