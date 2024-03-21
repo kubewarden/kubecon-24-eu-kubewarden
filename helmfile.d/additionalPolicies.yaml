@@ -1,0 +1,11 @@
+helmDefaults:
+  createNamespace: true
+  timeout: 360
+  atomic: true
+  verify: false
+  wait: true
+
+releases:
+  - name: additionnal Policies
+    chart: ../charts/additionalPolicies
+    namespace: default
