@@ -1,23 +1,24 @@
-name: Bump Helmfile dependencies
+name: Bump Kubewarden dependencies
 
 autodiscovery:
-  groupby: individual
+  groupby: all
   scmid: default
   actionid: default
   crawlers:
     helm:
-      ignore:
+      only:
         - dependencies:
             "kubewarden-controller": ""
             "kubewarden-crds": ""
             "kubewarden-defaults": ""
     helmfile:
       rootdir: helmfile.d
-      ignore:
+      only:
         - charts:
             "kubewarden-controller": ""
             "kubewarden-crds": ""
             "kubewarden-defaults": ""
+      
 
 scms:
   default:
