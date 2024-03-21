@@ -1,0 +1,31 @@
+name: Bump Helmfile dependencies
+
+autodiscovery:
+  groupby: individual
+  scmid: default
+  actionid: default
+  crawlers:
+    helm:
+    helmfile:
+      rootdir: helmfile.d
+      
+
+scms:
+  default:
+    kind: github
+    spec:
+      user: updatecli
+      email: me@olblak.com
+      owner: olblak
+      repository: kubecon-24-eu-kubewarden
+      token: '{{ requiredEnv "UPDATECLI_GITHUB_TOKEN" }}'
+      username: '{{ requiredEnv "UPDATECLI_GITHUB_ACTOR" }}'
+      branch: main
+
+actions:
+  default:
+    kind: github/pullrequest
+    scmid: default
+    spec:
+      labels:
+        - dependencies
