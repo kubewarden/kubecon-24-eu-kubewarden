@@ -8,4 +8,4 @@ helmDefaults:
 releases:
   - name: additionnal Policies
     chart: ../charts/additionalPolicies
-    namespace: default
+
