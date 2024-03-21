@@ -6,6 +6,6 @@ helmDefaults:
   wait: true
 
 releases:
-  - name: additionnal Policies
+  - name: additionnalpolicies
     chart: ../charts/additionalPolicies
 
