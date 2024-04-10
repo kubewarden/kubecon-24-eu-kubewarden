@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Kubewarden</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/black.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section
+          data-markdown
+          data-separator="^\n\n\n"
+          data-separator-vertical="^\n\n"
+          data-separator-notes="^Note:"
+          data-charset="iso-8859-15"
+        >
+          <script type="type=template">
+            # Kubewarden
+
+
+            ## Kubernetes Policy Engine
+
+            Flexible, secure and portable thanks to WebAssembly
+
+
+            ## Great for
+
+            ---
+
+            Familiar policy writing
+
+            ---
+
+            Go, Rust, JS, Rego, YAML, CEL, C#, Swift, etc.
+
+
+            ## Great for
+
+            ---
+
+            Easy policy distribution
+
+            ---
+
+
+            ## Great for
+
+            ---
+
+            Build and push once, run everywhere
+
+            ---
+
+
+            ## Great for
+
+            ---
+
+            Community maintained policies
+
+            ---
+
+            [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kubewarden-policies)](https://artifacthub.io/packages/search?kind=13&sort=relevance&page=1)
+
+          </script>
+        </section>
+        <section
+          data-markdown
+          data-separator="^\n\n\n"
+          data-separator-vertical="^\n\n"
+          data-separator-notes="^Note:"
+          data-charset="iso-8859-15"
+        >
+          <!--
+                  Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
+                  For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
+                -->
+          <script type="type=template">
+            # Community
+
+
+            ## CNCF
+
+            ![cncf](static/cncf-icon-color.png)
+
+            Sandbox
+
+
+            ## Policies
+
+            [![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/kubewarden-policies)](https://artifacthub.io/packages/search?kind=13&sort=relevance&page=1)
+
+
+            ## Office Hours
+
+            [Every second Thursday of the month](https://teamup.com/ks2bj74dvw132mhjtj)
+
+            ---
+
+            [Past records on Youtube](https://www.youtube.com/watch?v=1wRcO_sfgVE&list=PLfAoTEAPazb6D_TBWZAWZtAnIbK6b7GTi)
+
+
+            ## Slack
+
+            [Kubernetes#Kubewarden](https://kubernetes.slack.com/?redir=%2Fmessages%2Fkubewarden)
+
+            ![image](static/qr-slack.png)
+          </script>
+        </section>
+        <section
+          data-markdown
+          data-separator="^\n\n\n"
+          data-separator-vertical="^\n\n"
+          data-separator-notes="^Note:"
+          data-charset="iso-8859-15"
+        >
+          <script type="type=template">
+            # Features
+
+
+            ## WebAssembly
+
+            Write policies using any programming language that supports WebAssembly as a compilation target.
+
+            ![image](static/wasm-logo.png)
+
+            ---
+
+            Go, Rust, Typescript, Rego, YAML, CEL, C#, Swift, etc.
+
+            ---
+
+
+            ## Audit Scanner
+
+            Continuously verify the compliance state of the Kubernetes cluster.
+
+
+            ## Context Aware Policies
+
+            Determine whether an AdmissionRequest is acceptable using information from resources deployed in the cluster
+
+
+            ## Metrics & Tracing
+
+            Kubewarden &#10084; Prometheus, Jaeger, OpenTelemetry
+
+
+            ## Security
+
+            Kubewarden &#10084; Sigstore
+
+
+            ## Distribute
+
+            Share policies using an OCI based registry
+
+
+            ## Raw Policies
+
+            Evaluate arbitrary JSON documents out-of-cluster
+          </script>
+          <!--
+                  Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
+                  For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
+                -->
+        </section>
+
+        <section>
+          <section>
+            <h2>Rancher</h2>
+            Kubewarden &#10084; Rancher
+          </section>
+          <section
+            data-background-video="static/2023/01install-extension.webm"
+          ></section>
+          <section
+            data-background-video="static/2023/02install-kubewarden.webm"
+          ></section>
+          <section
+            data-background-video="static/2023/03install-defaults.webm"
+          ></section>
+          <section
+            data-background-video="static/2023/04add-artifacthub-whitelist.webm"
+          ></section>
+          <section
+            data-background-video="static/2023/05verify-install.webm"
+          ></section>
+          <section
+            data-background-video="static/2023/artifacthub.webm"
+          ></section>
+          <section
+            data-background-video="static/2024/compliance-reports.webm"
+          ></section>
+          <section
+            data-background-video="static/2024/policy-reporter-ui-short.webm"
+          ></section>
+          <section
+            data-background-video="static/2024/tracing-jaeger.webm"
+          ></section>
+        </section>
+
+        <section
+          data-markdown
+          data-separator="^\n\n\n"
+          data-separator-vertical="^\n\n"
+          data-separator-notes="^Note:"
+          data-charset="iso-8859-15"
+        >
+          <script type="type=template">
+            # Let's talk
+          </script>
+          <!--
+                  Note that Windows uses `\r\n` instead of `\n` as its linefeed character.
+                  For a regex that supports all operating systems, use `\r?\n` instead of `\n`.
+                -->
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        autoSlide: 5000,
+        loop: true,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+
+    <!-- Allow to have header/footer -->
+    <style type="text/css">
+      /* 1. Style header/footer <div> so they are positioned as desired. */
+      #header-left {
+        position: absolute;
+        top: 0%;
+        left: 2%;
+      }
+      #header-right {
+        position: absolute;
+        top: 0%;
+        right: 2%;
+      }
+      #footer-left {
+        position: absolute;
+        bottom: 0%;
+        left: 0%;
+      }
+      #footer-right {
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+      }
+    </style>
+
+    <!-- 2. Create hidden header/footer <div> -->
+    <div id="hidden" style="display: none">
+      <div id="header">
+        <div id="header-left">
+          <img
+            src="static/qr-kubewarden.png"
+            alt="Kubewarden Logo"
+            style="width: 150px; height: 150px"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript">
+      // 3. On Reveal.js ready event, copy header/footer <div> into each `.slide-background` <div>
+      var header = $("#header").html();
+      if (window.location.search.match(/print-pdf/gi)) {
+        Reveal.addEventListener("ready", function (event) {
+          $(".slide-background").append(header);
+        });
+      } else {
+        $("div.reveal").append(header);
+      }
+    </script>
+  </body>
+</html>
