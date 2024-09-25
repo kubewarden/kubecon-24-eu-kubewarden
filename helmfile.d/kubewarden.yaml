@@ -13,7 +13,7 @@ releases:
     chart: kubewarden/kubewarden-crds
     wait: true
     waitForJobs: true
-    version: 1.6.0
+    version: 1.8.0
   - name: kubewarden-controller
     namespace: kubewarden
     chart: kubewarden/kubewarden-controller
