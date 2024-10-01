@@ -13,7 +13,7 @@ releases:
     chart: kubewarden/kubewarden-crds
     wait: true
     waitForJobs: true
-    version: 1.6.0
+    version: 1.9.0
   - name: kubewarden-controller
     namespace: kubewarden
     chart: kubewarden/kubewarden-controller
@@ -29,7 +29,7 @@ releases:
             port: 8080
         auditScanner:
           policyReporter: true
-    version: 2.2.0
+    version: 3.0.1
   - name: kubewarden-defaults
     namespace: kubewarden
     chart: kubewarden/kubewarden-defaults
@@ -43,4 +43,4 @@ releases:
       - recommendedPolicies:
           enabled: true
           defaultPolicyMode: protect
-    version: 2.1.0
+    version: 2.4.0
