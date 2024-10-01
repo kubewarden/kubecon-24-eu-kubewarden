@@ -10,7 +10,7 @@ helmDefaults:
 releases:
   - name: jaeger-operator
     namespace: jaeger
-    version: 2.56.0
+    version: 2.57.0
     chart: jaegertracing/jaeger-operator
     values:
       - rbac:
