@@ -10,7 +10,7 @@ helmDefaults:
 releases:
   - name: cert-manager
     namespace: cert-manager
-    version: v1.15.3
+    version: v1.16.0
     chart: cert-manager/cert-manager
     disableValidationOnInstall: true
     wait: true
