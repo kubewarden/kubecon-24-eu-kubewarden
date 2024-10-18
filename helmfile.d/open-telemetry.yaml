@@ -10,6 +10,6 @@ helmDefaults:
 releases:
   - name: open-telemetry
     namespace: open-telemetry
-    version: 0.71.0
+    version: 0.71.1
     chart: open-telemetry/opentelemetry-operator
     wait: true
