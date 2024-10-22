@@ -10,7 +10,7 @@ helmDefaults:
 releases:
   - name: prometheus
     namespace: prometheus
-    version: 65.3.1
+    version: 65.3.2
     chart: prometheus-community/kube-prometheus-stack
     disableValidationOnInstall: true
     wait: true
