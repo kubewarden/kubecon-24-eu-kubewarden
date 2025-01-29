@@ -29,7 +29,7 @@ releases:
             port: 8080
         auditScanner:
           policyReporter: true
-    version: 4.0.1
+    version: 4.1.0
   - name: kubewarden-defaults
     namespace: kubewarden
     chart: kubewarden/kubewarden-defaults
